@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  background-color: rgb(118, 166, 238);
+  color: #00153D; 
+}
+#conteiner{
+  background: linear-gradient(rgb(155, 204, 253) , rgb(96, 172, 253)); 
+  max-width: 750px;
+  height: 500px; 
+  margin: 0 auto;
+  margin-top: 3%;
+  border: 2px solid #639fe8; 
+}
+#logo img {
+  width: 90px; 
+  margin-left: -140px;
+}
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+h3 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 40px; 
+  font-family: "Caladea", sans-serif;
+}
+#conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-connteiner{
+  display: flex;
+  margin-top: 100px;
+}
+input {
+  margin-bottom: 15px; 
+  background-color: #00153d1a;
+  height: 35px;
+  width: 250px;
+  border: 2px solid #00153d4e;
+}
+input::placeholder {
+  color: black;
+}
+a {
+  padding: 10px 20px; 
+  font-size: 16px; 
+  background-color: rgb(155, 204, 253); 
+  color: rgb(0, 0, 0); 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  right: 80px; 
+  font-weight: bolder;
+  width: 150px;
+  margin-left: 100%;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.button {
+  margin-top: 20px;
+}
+a:hover {
+background-color: rgb(120, 184, 253); 
+}

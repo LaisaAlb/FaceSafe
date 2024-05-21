@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSafe - Login</title>
+    <link rel="stylesheet" href="css/dados.css">
+
+</head>
+<body>
+    <div id="conteiner">
+        <header>
+            <div id="logo">
+                <img src="img/logo (4).png" alt="Logo FaceSafe">
+            </div>
+            <h3>Preencha os campos a seguir com <br>as seguintes informações:</h3>
+        </header>
+        <main>
+            <div class="form-container">
+                <form action="#">
+                    <div class="campos">
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" maxlength="80">
+                    </div>
+                    <div class="campos">
+                        <input type="email" id="email" name="email" placeholder="Digite o email" maxlength="50">
+                    </div>
+                    <div class="campos">
+                        <input type="number" id="cpf" name="cpf" placeholder="Digite o CPF" maxlength="11" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                    <div class="campos">
+                        <input type="text" id="codigo" name="codigo" placeholder="Digite o Código de identificação" maxlength="11">
+                    </div>
+                    <div class="button">
+                        <a id="continuarButton" href="face.html">Continuar</a>
+                    </div>
+                    <script src="js/dados.js"></script>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

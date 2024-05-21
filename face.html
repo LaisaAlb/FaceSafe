@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaceSafe</title>
+  <link rel="stylesheet" href="css/face.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="logo">
+        <img src="img/logo (4).png" alt="Logo FaceSafe">
+      </div>
+    </header>
+    <h4>Estamos quase lá...</h4>
+    <p>Agora que já preencheu as informações, posicione a <br>
+    câmera em frente ao rosto e que a iluminação esteja clara</p>
+    <button id="openCameraButton" class="center-button">
+      <img id="plus" src="img/icons8-add-50.png" alt="Adicionar">
+      Abrir Câmera
+    </button>
+    <div id="cameraContainer" style="display: none;">
+      <video id="videoElement" autoplay></video>
+      <button id="captureButton">Capturar Foto</button>
+    </div>
+  </div>
+  <script src="js/face.js"></script>
+</body>
+</html>

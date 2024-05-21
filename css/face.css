@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: "Caladea", sans-serif;
+  padding: 0;
+  background-color: rgb(118, 166, 238);
+  color: #00153D;
+}
+#container {
+  background: linear-gradient(rgb(155, 204, 253), rgb(96, 172, 253));
+  max-width: 750px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 3%;
+  border: 2px solid #639fe8;
+}
+#logo img {
+  width: 95px;
+  height: auto;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+h4 {
+  margin-left: 50px;
+  font-size: 1.5rem;
+}
+p {
+  margin-left: 50px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+#openCameraButton{
+  background-color: rgb(155, 204, 253);
+  border: 2px solid rgb(155, 204, 253);
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 5px; 
+  color: #00153D;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+#openCameraButton:hover{
+  background-color: #5ba1f6;
+  border: 2px solid #5ba1f6;
+}
+#plus {
+  width: 20px;
+  vertical-align: -5px;
+  margin-right: 5px; 
+}
+
+/* .campos {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  input[type="file"] {
+   
+    color: transparent;
+    margin: center;
+}
+
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#cameraContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  width: 100%; 
+  height: 100vh; 
+}
+
+#videoElement {
+  width: auto; 
+  max-width: 100%; 
+  max-height: 100%; 
+  margin: 0 auto; 
+  width: 100px; 
+  height: 100px; 
+  right:100px;
+}
+
+#captureButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

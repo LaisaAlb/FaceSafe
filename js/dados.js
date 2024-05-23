@@ -29,4 +29,3 @@ document.getElementById("email").addEventListener("input", verificarCampos);
 document.getElementById("cpf").addEventListener("input", verificarCampos);
 document.getElementById("rg").addEventListener("input", verificarCampos);
 document.getElementById("tel").addEventListener("input", verificarCampos);
-document.getElementById("codigo").addEventListener("input", verificarCampos);

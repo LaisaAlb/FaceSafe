@@ -15,9 +15,8 @@ function verificarCampos() {
     var cpf = document.getElementById("cpf").value;
     var rg = document.getElementById("rg").value;
     var tel = document.getElementById("tel").value;
-    var codigo = document.getElementById("codigo").value;
 
-    if (nome.trim() !== "" && email.trim() !== "" && cpf.trim() !== "" && rg !== "" && tel !== "" && codigo.trim() !== "") {
+    if (nome.trim() !== "" && email.trim() !== "" && cpf.trim() !== "" && rg !== "" && tel !== "") {
         continuarButton.disabled = false;
     } else {
         continuarButton.disabled = true;

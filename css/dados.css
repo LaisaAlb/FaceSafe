@@ -36,6 +36,13 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+p{
+  width: 90px; 
+  margin-left: -140px;
+  margin-top: 0px;
+  font-weight: bolder;
+  color: #00153D;
+}
 
 h1 {
   display: inline-block;

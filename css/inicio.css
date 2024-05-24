@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
   font-family: "Caladea", sans-serif;
@@ -29,6 +30,13 @@ header {
   position: absolute;
   top: 17%;
   left: 25%;
+}
+p{
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  font-weight: bolder;
+  color: #00153D;
 }
 .logo img {
   width: 90px;

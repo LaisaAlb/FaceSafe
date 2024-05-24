@@ -27,6 +27,12 @@ body {
   width: 90px;
   height: auto;
 }
+p{
+  margin-top: 0px;
+  margin-left: 17px;
+  font-weight: bolder;
+  color: #00153D;
+}
 #openCameraButton{
   background-color: rgb(155, 204, 253);
   border: 2px solid rgb(155, 204, 253);

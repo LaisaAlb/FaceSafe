@@ -27,6 +27,14 @@ body {
 #logo {
   margin-left: 50px;
 }
+#textologo {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: -6px;
+  transform: translateX(-50%); 
+  font-weight: bolder;
+  color: #00153D;
+}
 h1 {
   margin-left: 50px;
   font-size: 1.5rem;

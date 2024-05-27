@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 
-#conteiner {
+#container {
   background: linear-gradient(rgb(155, 204, 253), rgb(96, 172, 253)); 
   max-width: 750px;
   width: 600px;

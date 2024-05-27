@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="css/foto.css">
 </head>
 <body>
+    <div id="container">
+
     <header>
         <div id="logo">
           <img src="img/logo (4).png" alt="Logo FaceSafe">
           <p>FaceSafe</p>
         </div>
     </header>
-    <div id="container">
+        
         <button id="openCameraButton" class="center-button">
             <img id="plus" src="img/icons8-add-50.png" alt="Adicionar">
             <a href="foto.html">Abrir câmera</a>
         </button>
-    </div>
-    <div id="cameraContainer" style="display: none;">
+        <div id="cameraContainer" style="display: none;">
         <video id="videoElement" autoplay></video>
         <button id="captureButton">Capturar Foto</button>
+        </div>
     </div>
     <script src="js/foto.js"></script>
 </body>

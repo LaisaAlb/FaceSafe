@@ -1,52 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-  font-family: "Caladea", sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
-  background-color: rgb(118, 166, 238);
-  color: #00153D;
+  background-color: rgb(130, 173, 237);
+  color: #00153D; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 #container {
-  background: linear-gradient(rgb(155, 204, 253), rgb(96, 172, 253));
+  background: linear-gradient(rgb(155, 204, 253), rgb(96, 172, 253)); 
   max-width: 750px;
-  height: 500px;
-  margin: 0 auto;
-  margin-top: 3%;
-  border: 2px solid #639fe8;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  border: 2px solid #639fe8; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: flex-start; 
-  padding-left: 20px;
+  align-items: center;
+  justify-content: center;
 }
 #logo img {
-  width: 95px;
-  height: auto;
-  margin-top: -100px;
+  width: 90px; 
+  margin-left: -250px;
+  margin-top: -50px;
 }
+
 #logo {
-  margin-left: 50px;
+  display: inline-block;
+  vertical-align: middle;
 }
-#textologo {
-  position: absolute;
+#logo > p {
+  margin-left: -238px;
   margin-top: 0px;
-  margin-left: -6px;
-  transform: translateX(-50%); 
   font-weight: bolder;
-  color: #00153D;
 }
-h1 {
-  margin-left: 50px;
+h1{
+  margin-top: -20px;
   font-size: 1.5rem;
   padding-top: 20px;
-  padding-left: 200px;
   align-items: center;
 }
-p {
-  margin-left: 50px;
+#text{
+  color: #00153D;
   font-size: 1rem;
+  margin-top: -10px;
   font-weight: bolder;
-  padding-left: 110px;
 }
 #openCameraButton{
   background-color: rgb(155, 204, 253);
@@ -56,9 +60,8 @@ p {
   padding-left: 5px; 
   color: #00153D;
   font-weight: bolder;
-  margin-left: 290px;
-  margin-top: 30px;
-}
+  margin-top: 50px;
+ }
 #openCameraButton a {
   text-decoration: none;
   color: #00153D;
@@ -73,50 +76,4 @@ p {
   margin-right: 5px; 
 }
 
-/* .campos {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  input[type="file"] {
-   
-    color: transparent;
-    margin: center;
-}
-
-.center-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#cameraContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; 
-  width: 100%; 
-  height: 100vh; 
-}
-
-#videoElement {
-  width: auto; 
-  max-width: 100%; 
-  max-height: 100%; 
-  margin: 0 auto; 
-  width: 100px; 
-  height: 100px; 
-  right:100px;
-}
-
-#captureButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 

@@ -1,38 +1,40 @@
-const continuarButton = document.getElementById("continuarButton");
-const form = document.querySelector("#form")
-const nameInput = document.querySelector("#nome")
-const emailInput = document.querySelector("#email")
-const cpfInput = document.querySelector("#cpf")
-const rgInput = document.querySelector("#rg")
-const telInput = document.querySelector("#tel")
+document.addEventListener("DOMContentLoaded", function() {
+    const continuarButton = document.getElementById("continuarButton");
+    const form = document.querySelector("#form");
+    const nameInput = document.querySelector("#nome");
+    const emailInput = document.querySelector("#email");
+    const cpfInput = document.querySelector("#cpf");
+    const rgInput = document.querySelector("#rg");
+    const telInput = document.querySelector("#tel");
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    if(nameInput.value === "") {
-        alert('Por favor, preencha o campo "nome"!')
-        return;
-    }
-    if(emailInput.value === "") {
-        alert('Por favor, preencha o campo "email"!')
-        return;
-    }
-    if(cpfInput.value === "") {
-        alert('Por favor, preencha o campo "CPF"!')
-        return;
-    }
-    if(rgInput.value === "") {
-        alert('Por favor, preencha o campo "RG"!')
-        return;
-    }
-    if(telInput.value === "") {
-        alert('Por favor, preencha o campo "Telefone"!')
-        return;
-    }
+        if(nameInput.value === "") {
+            alert('Por favor, preencha o campo "nome"!');
+            return;
+        }
+        if(emailInput.value === "") {
+            alert('Por favor, preencha o campo "email"!');
+            return;
+        }
+        if(cpfInput.value === "") {
+            alert('Por favor, preencha o campo "CPF"!');
+            return;
+        }
+        if(rgInput.value === "") {
+            alert('Por favor, preencha o campo "RG"!');
+            return;
+        }
+        if(telInput.value === "") {
+            alert('Por favor, preencha o campo "Telefone"!');
+            return;
+        }
 
-
-    form.submit();
+        form.submit();
+    });
 });
+
 
 
 

@@ -1,43 +1,45 @@
-const openCameraButton = document.getElementById('openCameraButton');
-        const cameraContainer = document.getElementById('cameraContainer');
-        const videoElement = document.getElementById('videoElement');
-        const captureButton = document.getElementById('captureButton');
+// Seleciona elementos
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const captureButton = document.getElementById('capture-btn');
 
-        // Função para abrir a câmera
-        function openCamera() {
-            // Solicita acesso à câmera do dispositivo
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function(stream) {
-                    // Exibe o fluxo de vídeo da câmera no elemento de vídeo
-                    videoElement.srcObject = stream;
-                    // Exibe o contêiner da câmera
-                    cameraContainer.style.display = 'block';
-                })
-                .catch(function(err) {
-                    console.log('Erro ao acessar a câmera: ', err);
-                });
-        }
+// Obter acesso à câmera do usuário
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then(function(stream) {
+    video.srcObject = stream;
+    video.play();
+  })
+  .catch(function(err) {
+    console.error('Erro ao acessar a câmera:', err);
+  });
 
-        // Função para capturar a foto
-        function capturePhoto() {
-            // Cria um canvas temporário para desenhar a foto
-            const canvas = document.createElement('canvas');
-            canvas.width = videoElement.videoWidth;
-            canvas.height = videoElement.videoHeight;
-            const context = canvas.getContext('2d');
+// Quando o botão de captura é clicado
+captureButton.addEventListener('click', function() {
+    // Desenha o vídeo em um canvas
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            // Desenha a imagem do vídeo no canvas
-            context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+    // Converte o canvas para uma imagem base64
+    const imageData = canvas.toDataURL('image/png');
 
-            // Converte o canvas em uma imagem em formato de dados URL
-            const dataUrl = canvas.toDataURL('image/jpeg');
+    // Envia a imagem para o servidor via AJAX
+    fetch('/salvar-imagem', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ image: imageData })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Imagem enviada com sucesso:', data);
+    })
+    .catch(error => {
+        console.error('Erro ao enviar imagem:', error);
+    });
 
-            // Abre a foto em uma nova janela ou poderia ser enviada para o servidor, etc.
-            window.open(dataUrl);
-        }
+    // Se desejar, oculte a câmera e o botão de captura
+    video.style.display = 'none';
+    captureButton.style.display = 'none';
+});
 
-        // Adiciona um listener de clique ao botão de abrir a câmera
-        openCameraButton.addEventListener('click', openCamera);
-
-        // Adiciona um listener de clique ao botão de captura
-        captureButton.addEventListener('click', capturePhoto);

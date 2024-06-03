@@ -20,11 +20,13 @@
             <img id="plus" src="img/icons8-add-50.png" alt="Adicionar">
             <a href="foto.html">Abrir câmera</a>
         </button>
-        <div id="cameraContainer" style="display: none;">
-        <video id="videoElement" autoplay></video>
-        <button id="captureButton">Capturar Foto</button>
+        <div class="camera">
+            <video id="video" playsinline autoplay></video>
+            <button id="capture-btn">Capturar Foto</button>
         </div>
+        <canvas id="canvas" style="display:none;"></canvas>
     </div>
     <script src="js/foto.js"></script>
 </body>
 </html>
+

@@ -1,45 +1,37 @@
-// Seleciona elementos
+// Captura elementos do DOM
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const captureButton = document.getElementById('capture-btn');
 
-// Obter acesso à câmera do usuário
+// Obtém acesso à webcam
 navigator.mediaDevices.getUserMedia({ video: true })
-  .then(function(stream) {
-    video.srcObject = stream;
-    video.play();
-  })
-  .catch(function(err) {
-    console.error('Erro ao acessar a câmera:', err);
-  });
-
-// Quando o botão de captura é clicado
-captureButton.addEventListener('click', function() {
-    // Desenha o vídeo em um canvas
-    const context = canvas.getContext('2d');
-    context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-    // Converte o canvas para uma imagem base64
-    const imageData = canvas.toDataURL('image/png');
-
-    // Envia a imagem para o servidor via AJAX
-    fetch('/salvar-imagem', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ image: imageData })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Imagem enviada com sucesso:', data);
+    .then(stream => {
+        video.srcObject = stream;
     })
     .catch(error => {
-        console.error('Erro ao enviar imagem:', error);
+        console.error('Erro ao acessar a webcam: ', error);
     });
 
-    // Se desejar, oculte a câmera e o botão de captura
-    video.style.display = 'none';
-    captureButton.style.display = 'none';
-});
+// Adiciona um ouvinte de eventos ao botão de captura
+captureButton.addEventListener('click', capturePhoto);
+
+// Função para capturar a foto
+function capturePhoto() {
+    // Desenha o vídeo no canvas
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    // Obtém a foto do canvas em formato de dados (base64)
+    const imageDataURL = canvas.toDataURL('image/jpeg');
+    
+    // Cria um elemento <a> para download do arquivo
+    const downloadLink = document.createElement('a');
+    downloadLink.href = imageDataURL;
+    downloadLink.download = 'Foto do Cliente'; // Nome do arquivo
+    
+    // Simula um clique no link para iniciar o download
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
 
